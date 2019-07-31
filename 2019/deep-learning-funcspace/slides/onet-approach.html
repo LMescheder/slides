@@ -1,0 +1,98 @@
+## Our Approach
+
+<div style="position: relative;">
+<div class="flex-row" style="justify-content: flex-start; margin-left: 1em; overflow: visible">
+    <strong>Idea: </strong>
+    <div style="flex: 1; margin-left: 0.5em;">
+        Represent mesh as continuous decision boundary of deep learning classifier
+    </div>
+</div>
+
+<!-- <div class="flex-row"> -->
+<div style="text-align: center; overflow: hidden; position: relative; top: -15%; z-index: -1;">
+<video data-autoplay loop src="gfx/onet/teaser.mp4" width="50%"; style="max-height: 200%"></video>
+</div>
+</div>
+<!-- </div> -->
+
+<!-- <div class="reference">
+    [Mescheder et al, CVPR 2019]
+</div> -->
+
+---
+
+## Our Approach
+
+<div class="flex-row" style="justify-content: flex-start; margin-left: 1em;">
+    <strong>Idea: </strong>
+    <div style="flex: 1; margin-left: 0.5em;">
+        Represent mesh as continuous decision boundary of deep learning classifier
+    </div>
+</div>
+
+<div class="flex-row" style="flex:1; align-items: center; text-align: center;">
+<div class="col-6"> 
+    <img src="gfx/onet/ours.svg" width="50%">
+</div>
+<div class="flex-row col-6" style="justify-content: center">
+    <ul class="pro-contra">
+        <li class="pro fragment">Infinite Resolution</li>
+        <li class="pro fragment">Arbitrary Topologies</li>
+        <li class="pro fragment">Watertight Meshes</li>
+    </ul>
+</div>
+</div>
+
+<div class="reference">
+    [Mescheder et al, CVPR 2019]
+</div>
+
+---
+
+## Architecture
+
+<div class="flex-row" style="flex: 1; width: 100%; justify-content: space-around; align-items: flex-start;">
+    <img src="gfx/onet/architecture.svg" width=80%>
+</div>
+
+---
+
+## Loss Function
+
+<div class="flex-col" style="flex:1">
+<div class="flex-row" style="align-items: flex-start;">
+
+<div class="col-6 fragment" style="margin-left: 2em">
+    <div>Loss for supervised model:</div>
+    <div style="font-size: .7em;">
+        $$
+        \mathcal L_{\mathcal B}(\theta)
+        = \frac{1}{|\mathcal B|}\sum_{i=1}^{|\mathcal B|} \sum_{j=1}^ K \mathcal L(f_\theta(p_{ij},x_i), o_{ij})
+        $$
+    </div>
+</div>
+
+<div class="col-6 fragment" style="margin-left: 2em">
+    <div>Loss for unsupervised model:</div>
+    <div style="font-size: .7em;">
+        $$\mathcal L^{\text{gen}}_{\mathcal B}(\theta, \color{red}{\psi})
+        = \frac{1}{|\mathcal B|} \sum_{i=1}^{|\mathcal B|}
+        \Bigl[\sum_{j=1}^ K \mathcal L(f_\theta(p_{ij}, \color{red}{z_i}), o_{ij}) \\
+        + \color{red}{\mathrm{KL} \left(q_\psi(z | (p_{ij}, o_{ij})_{j=1:K}) \,\|\, p_0(z) \right) }
+        \Bigr]
+        $$
+    </div>
+</div>
+
+</div>
+</div>
+
+---
+
+## Inference
+
+Multiresolution IsoSurface Extraction (MISE):
+
+<div class="flex-row" style="flex: 1; width: 100%; justify-content: space-around; align-items: center;">
+    <img src="gfx/onet/inference.svg" width=85%>
+</div>

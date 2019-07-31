@@ -1,0 +1,44 @@
+## Occupancy Flow
+
+<strong>Motivation</strong>: Represent 3D motions with correspondences over time
+
+<div class="fragment flex-row row-12 flex-around align-center" data-fragment-index=1>
+
+<div class="col-3">
+    <video data-autoplay loop src="gfx/oflow/jumping_jacks.mp4" width="100%" style="max-width: 150%">
+</div>
+
+<div class="col-3">
+    <video data-autoplay loop src="gfx/oflow/leg_jump.mp4" width="100%" style="max-width: 150%">
+</div>
+
+<div class="col-3">
+    <video data-autoplay loop src="gfx/oflow/shake_hips.mp4" width="100%" style="max-width: 150%">
+</div>
+</div>
+
+<div class="fragment reference" data-fragment-index=1>
+    [Niemeyer et al, ICCV 2019]
+</div>
+
+---
+
+## Occupancy Flow
+
+Model Overview:
+
+<div class="flex-row row-12 align-center">
+<div class="flex-column col-6" style="text-align: center">
+    <div>
+        <img src="gfx/oflow/l_corr.svg" width="80%">
+        <div>Forward flow</div>
+    </div>
+</div>
+
+<div class="flex-column col-6" style="text-align: center">
+    <div class="fragment">
+        <img src="gfx/oflow/l_recon.svg" width="80%">
+        <div>Backward flow</div>
+    </div>
+</div>
+</div>
