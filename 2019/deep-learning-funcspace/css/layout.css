@@ -124,7 +124,8 @@ ul.pro-contra {
 	position: relative;
 	list-style: none;
 	margin-left: 0;
-  padding-left: 2em;
+  /* padding-left: 1em; */
+  clear: left;
 }
 
 ul.pro-contra li {
@@ -132,17 +133,31 @@ ul.pro-contra li {
 }
 
 ul.pro-contra li.pro:before {
-	content: "\002795";
-	position: absolute;
-  left: 0;
-  color: darkgreen;
+  content: "";
+  height: 1.2em;
+  width: 1.2em;
+  display: block;
+  float: left;
+  margin-left: -1.5em;
+  background-image: url(gfx/plus.svg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
 ul.pro-contra li.contra:before {
-	content: "\002796";
-	position: absolute;
-  left: 0;
-  color: darkred;
+  content: "";
+  height: 1.2em;
+  width: 1.2em;
+  display: block;
+  float: left;
+  margin-left: -1.5em;
+  background-image: url(gfx/minus.svg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
 .crop-box {
