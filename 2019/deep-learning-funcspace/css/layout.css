@@ -139,7 +139,7 @@ ul.pro-contra li.pro:before {
   display: block;
   float: left;
   margin-left: -1.5em;
-  background-image: url(gfx/plus.svg);
+  background-image: url("gfx/plus.svg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -153,7 +153,7 @@ ul.pro-contra li.contra:before {
   display: block;
   float: left;
   margin-left: -1.5em;
-  background-image: url(gfx/minus.svg);
+  background-image: url("gfx/minus.svg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
