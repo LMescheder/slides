@@ -70,17 +70,33 @@
         = \frac{1}{|\mathcal B|}\sum_{i=1}^{|\mathcal B|} \sum_{j=1}^ K \mathcal L(f_\theta(p_{ij},x_i), o_{ij})
         $$
     </div>
+    <div style="font-size: .9em;">
+        <ul>
+            <li style="margin: 0">$f_\theta$: occupancy network</li>
+            <li style="margin: 0">$p_{ij}$: random locations</li>
+            <li style="margin: 0">$o_{ij}$: ground truth occupancies</li>
+            <li style="margin: 0">$x_i$: observation (e.g. image) </li>
+            <li style="margin: 0">$\mathcal L$: cross-entropy loss</li>
+        </ul>
+    </div>
 </div>
 
 <div class="col-6 fragment" style="margin-left: 2em">
     <div>Loss for unsupervised model:</div>
-    <div style="font-size: .7em;">
+    <div style="font-size: .8em;">
         $$\mathcal L^{\text{gen}}_{\mathcal B}(\theta, \color{red}{\psi})
         = \frac{1}{|\mathcal B|} \sum_{i=1}^{|\mathcal B|}
         \Bigl[\sum_{j=1}^ K \mathcal L(f_\theta(p_{ij}, \color{red}{z_i}), o_{ij}) \\
         + \color{red}{\mathrm{KL} \left(q_\psi(z | (p_{ij}, o_{ij})_{j=1:K}) \,\|\, p_0(z) \right) }
         \Bigr]
         $$
+    </div>
+    <div style="font-size: .9em;">
+        <ul>
+            <li style="margin: 0">$p_0$: prior for latent $z$</li>
+            <li style="margin: 0">$q_\psi$: (approximate) posterior</li>
+            <li style="margin: 0">$z_i$: random sample from $q_\psi$ </li>
+        </ul>
     </div>
 </div>
 

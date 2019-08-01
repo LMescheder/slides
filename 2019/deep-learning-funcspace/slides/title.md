@@ -1,8 +1,8 @@
 <!-- .slide: class="titlepage" -->
 
-<h1> Deep Learning <br> in Function Space</h1>
+<h1> Deep Learning in <br> Function Space</h1>
 
-<p>Lars Mescheder </p>
+<p style="margin: 3%">Lars Mescheder </p>
 
 <div>
 <img src='gfx/title/max_planck_log.png' class="plain"  width="30%" style="vertical-align: middle">
