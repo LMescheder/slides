@@ -1,68 +1,72 @@
+<!-- .slide: class="layout-1x1" -->
+
 ## Our Approach
 
-<div style="position: relative;">
-<div class="flex-row" style="justify-content: flex-start; margin-left: 1em; overflow: visible">
-    <strong>Idea: </strong>
-    <div style="flex: 1; margin-left: 0.5em;">
+<div class="flex-row" style="justify-content: flex-start; align-items: flex-start; margin-left: 1em">
+    <strong>Idea:</strong>
+    <div style="flex: 1; margin-left: 0.5em; text-align: left;">
         Represent mesh as continuous decision boundary of deep learning classifier
     </div>
 </div>
 
-<!-- <div class="flex-row"> -->
-<div style="text-align: center; overflow: hidden; position: relative; top: -15%; z-index: -1;">
-<video data-autoplay loop src="gfx/onet/teaser.mp4" width="50%"; style="max-height: 200%"></video>
+<div class="column-1" style="height: 700px">
+    <!-- Teaser -->
+    <video data-autoplay loop
+        src="gfx/onet/teaser.mp4"
+        poster="gfx/onet/teaser.png"
+        width="50%" style="object-fit: cover"></video>
 </div>
-</div>
-<!-- </div> -->
-
-<!-- <div class="reference">
-    [Mescheder et al, CVPR 2019]
-</div> -->
 
 ---
 
+<!-- .slide: class="layout-1x2" -->
+
 ## Our Approach
 
-<div class="flex-row" style="justify-content: flex-start; margin-left: 1em;">
-    <strong>Idea: </strong>
-    <div style="flex: 1; margin-left: 0.5em;">
+<div class="subtitle flex-row" style="justify-content: flex-start; align-items: flex-start; margin-left: 1em">
+    <strong>Idea:</strong>
+    <div style="flex: 1; margin-left: 0.5em; text-align: left;">
         Represent mesh as continuous decision boundary of deep learning classifier
     </div>
 </div>
 
-<div class="flex-row" style="flex:1; align-items: center; text-align: center;">
-<div class="col-6"> 
+<div class="column-1 flex-col">
     <img src="gfx/onet/ours.svg" width="50%">
 </div>
-<div class="flex-row col-6" style="justify-content: center">
+
+<div class="column-2">
     <ul class="pro-contra" style="padding-left: 2em">
         <li class="pro fragment">Infinite Resolution</li>
         <li class="pro fragment">Arbitrary Topologies</li>
         <li class="pro fragment">Watertight Meshes</li>
     </ul>
 </div>
-</div>
 
-<div class="reference">
-    [Mescheder et al, CVPR 2019]
-</div>
+<footer class="reference">
+    Mescheder, Oechsle, Niemeyer, Nowozin & Geiger (CVPR 2019)
+</footer>
 
 ---
+
+<!-- .slide: class="layout-1x1" -->
 
 ## Architecture
 
-<div class="flex-row" style="flex: 1; width: 100%; justify-content: space-around; align-items: flex-start;">
-    <img src="gfx/onet/architecture.svg" width=80%>
+<div class="column-1 flex-col">
+    <svg width=1800px height=900px>
+        <image href="gfx/onet/architecture_00.svg" y="0" x="0" />
+        <image class="fragment" href="gfx/onet/architecture_01.svg" y="0" x="0" />
+    </svg>
 </div>
 
 ---
 
+<!-- .slide: class="layout-1x2" -->
+
 ## Loss Function
 
-<div class="flex-col" style="flex:1">
-<div class="flex-row" style="align-items: flex-start;">
 
-<div class="col-6 fragment" style="margin-left: 2em">
+<div class="column-1">
     <div>Loss for supervised model:</div>
     <div style="font-size: .7em;">
         $$
@@ -81,7 +85,7 @@
     </div>
 </div>
 
-<div class="col-6 fragment" style="margin-left: 2em">
+<div class="column-2 fragment">
     <div>Loss for unsupervised model:</div>
     <div style="font-size: .8em;">
         $$\mathcal L^{\text{gen}}_{\mathcal B}(\theta, \color{red}{\psi})
@@ -100,15 +104,26 @@
     </div>
 </div>
 
-</div>
-</div>
 
 ---
+
+<!-- .slide: class="layout-1x1" -->
 
 ## Inference
 
 Multiresolution IsoSurface Extraction (MISE):
 
-<div class="flex-row" style="flex: 1; width: 100%; justify-content: space-around; align-items: center;">
-    <img src="gfx/onet/inference.svg" width=85%>
+<div class="column-1 flex-col">
+    <svg width=1800px height=520px>
+        <image href="gfx/onet/inference_00.svg" y="0" x="0" width="100%"/>
+        <image class="fragment" href="gfx/onet/inference_01.svg" y="0" x="0" width="100%" />
+        <image class="fragment" href="gfx/onet/inference_02.svg" y="0" x="0" width="100%" />
+        <image class="fragment" href="gfx/onet/inference_03.svg" y="0" x="0" width="100%" />
+        <image class="fragment" href="gfx/onet/inference_04.svg" y="0" x="0" width="100%" />
+        <image class="fragment" href="gfx/onet/inference_05.svg" y="0" x="0" width="100%" />
+        <image class="fragment" href="gfx/onet/inference_06.svg" y="0" x="0" width="100%" />
+        <image class="fragment" href="gfx/onet/inference_07.svg" y="0" x="0" width="100%" />
+        <image class="fragment" href="gfx/onet/inference_08.svg" y="0" x="0" width="100%" />
+        <image class="fragment" href="gfx/onet/inference_09.svg" y="0" x="0" width="100%" />
+    </svg>
 </div>

@@ -1,68 +1,145 @@
+<!-- .slide: class="layout-1x1" -->
+
 ## Occupancy Flow
 
-<strong>Motivation</strong>: Represent 3D motions with correspondences over time
+<strong>So far</strong>: Static meshes
 
-<div class="fragment flex-row row-12 flex-around align-center" data-fragment-index=1>
-
-<div class="col-3">
-    <video data-autoplay loop src="gfx/oflow/jumping_jacks.mp4" width="100%" style="max-width: 150%">
-</div>
-
-<div class="col-3">
-    <video data-autoplay loop src="gfx/oflow/leg_jump.mp4" width="100%" style="max-width: 150%">
-</div>
-
-<div class="col-3">
-    <video data-autoplay loop src="gfx/oflow/shake_hips.mp4" width="100%" style="max-width: 150%">
-</div>
-</div>
-
-<div class="fragment reference" data-fragment-index=1>
-    [Niemeyer et al, ICCV 2019]
+<div class="column-1 figure" style="grid-template-columns: 40% 20% 40%; height: 800px;">
+    <!-- Input -->
+    <img src="gfx/oflow/input.png"
+        width=100% style="object-fit: cover; height: 600px;"></video>
+    <p>Input</p>
+    <!-- Network -->
+    <img src="gfx/onet/network.svg" width="60%">
+    <p>Neural Network</p> 
+    <!-- Output -->
+    <img src="gfx/oflow/oflow.png"
+        width=100% style="object-fit: cover; height: 600px;"></video>
+    <p>Static Mesh</p>
 </div>
 
 ---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Occupancy Flow
+
+<strong>Missing</strong>: 3D Motion
+
+<div class="column-1 figure" style="grid-template-columns: 40% 20% 40%; height: 800px;">
+    <!-- Input -->
+    <video data-autoplay loop src="gfx/oflow/input.mp4" poster="gfx/oflow/input.png"
+        width=100% style="object-fit: cover; height: 600px;"></video>
+    <p>Input</p>
+    <!-- Network -->
+    <img src="gfx/onet/network.svg" width="60%">
+    <p>Neural Network</p>
+    <!-- Output -->
+    <video data-autoplay loop
+        src="gfx/oflow/oflow.mp4"
+        poster="gfx/oflow/oflow.png"
+        width=100% style="object-fit: cover; height: 600px;"></video>
+    <p>3D Motion</p>
+</div>
+
+---
+
+<!-- .slide: class="layout-U" -->
+
+## Occupancy Flow
+
+<div class="subtitle">
+    <strong>First idea</strong>: Generalize Occupancy Networks to 4D
+</div>
+
+<div class="column-1 flex-col" style="justify-content: space-evenly;">
+    <div class="fragment">
+        3D-Occupancy Network: <br>
+        $\mathbb R^3 \to [0, 1]$
+    </div>
+</div>
+
+<div class="column-2 flex-col" style="justify-content: space-evenly;">
+    <div class="fragment">
+        4D-Occupancy Network: <br>
+        $\mathbb R^3 \times [0, T] \to [0, 1]$
+    </div>
+</div>
+
+<div class="column-3 flex-col">
+    <ul class="pro-contra">
+        <li class="pro fragment">Continuous in both space and time</li>
+        <li class="contra fragment">Shape and motion not disentangled</li>
+        <li class="contra fragment">No correspondences over time</li>
+        <li class="contra fragment">Slow inference</li>
+    </ul>
+</div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Occupancy Flow
+
+<strong>Our idea</strong>: Decompose into Occupancy Network and Velocity Network
+
+<div class="column-1">
+    <div class="figure fragment" data-fragment-index=1 style="grid-template-columns: 33% 33% 33%">
+        <!-- First example -->
+        <video data-autoplay loop
+            src="gfx/oflow/jumping_jacks.mp4"
+            poster="gfx/oflow/jumping_jacks.png"
+            width="90%"></video>
+        <!-- Second example -->
+        <video data-autoplay loop
+            src="gfx/oflow/leg_jump.mp4"
+            poster="gfx/oflow/leg_jump.png"
+            width="90%"></video>
+        <!-- Third example -->
+        <video data-autoplay loop
+            src="gfx/oflow/shake_hips.mp4"
+            poster="gfx/oflow/shake_hips.png"
+            width="90%"></video>
+    </div>
+</div>
+
+<footer class="fragment reference" data-fragment-index=1>
+    Niemeyer, Mescheder, Oechsle & Geiger (ICCV 2019)
+</footer>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
 
 ## Occupancy Flow
 
 Model Overview:
 
-<div class="flex-row row-12 align-center">
-<div class="flex-column col-6" style="text-align: center">
-    <div>
-        <img src="gfx/oflow/onet.svg" width="100%">
-        <div>Occupancy Network</div>
-    </div>
-</div>
-
-<div class="flex-column col-6" style="text-align: center">
-    <div class="fragment">
-        <img src="gfx/oflow/oflow.svg" width="100%">
-        <div>Velocity Network</div>
-    </div>
-</div>
+<div class="column-1">
+<div class="figure">
+    <img src="gfx/oflow/architecture-onet.svg" width="90%">
+    <img class="fragment" data-fragment-index=1
+        src="gfx/oflow/architecture-vnet.svg" width="90%">
+    <p>Occupancy Network</p>
+    <p class="fragment" data-fragment-index=1 >Velocity Network</p>
 </div>
 
 ---
+
+<!-- .slide: class="layout-1x1" -->
 
 ## Occupancy Flow
 
 Model Overview:
 
-<div class="flex-row row-12 align-center">
-<div class="flex-column col-6" style="text-align: center">
-    <div>
-        <img src="gfx/oflow/l_corr.svg" width="80%">
-        <div>Forward flow</div>
+<div class="column-1">
+    <div class="figure">
+        <img src="gfx/oflow/l_corr.svg" width="90%">
+        <p>Forward flow</p>
+        <img class="fragment" data-fragment-index="0"
+            src="gfx/oflow/l_recon.svg" width="90%">
+        <p class="fragment" data-fragment-index="0">
+            Backward flow
+        </p>
     </div>
 </div>
-
-<div class="flex-column col-6" style="text-align: center">
-    <div class="fragment">
-        <img src="gfx/oflow/l_recon.svg" width="80%">
-        <div>Backward flow</div>
-    </div>
-</div>
-</div>
-
-

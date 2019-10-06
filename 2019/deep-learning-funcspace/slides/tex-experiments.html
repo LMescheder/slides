@@ -1,43 +1,159 @@
+<!-- .slide: class="layout-1x1" -->
+
 ## Texture Fields
 
 Texture Prediction (true model):
 
-<div class="flex-row flex-center row-12">
-    <div>
-    <video data-autoplay loop src="gfx/texnet/single_synthetic_test.mp4" width="100%"></video>
-    </div>
+<div class="flex-row">
+    <!-- Animation -->
+    <video data-autoplay loop
+        src="gfx/texnet/single_synthetic_test.mp4"
+        poster="gfx/texnet/single_synthetic_test.png"
+        width="80%"></video>
 </div>
 
 ---
+
+<!-- .slide: class="layout-1x1" -->
 
 ## Texture Fields
 
 Texture Prediction (predicted model):
 
-<div class="flex-row flex-center row-12">
-    <div>
-        <video data-autoplay loop src="gfx/texnet/single_onet_test.mp4" width="100%"></video>
-    </div>
+<div class="flex-row">
+    <!-- Animation -->
+    <video data-autoplay loop
+        src="gfx/texnet/single_onet_test.mp4"
+        poster="gfx/texnet/single_onet_test.png"
+        width="80%"></video>
 </div>
 
 ---
+
+<!-- .slide: class="layout-1x1" -->
 
 ## Texture Fields
 
 Texture Prediction (real image):
 
-<div class="flex-row flex-center row-12">
-    <div>
-        <video data-autoplay loop src="gfx/texnet/single_real_test.mp4" width="100%"></video>
+<div class="flex-row">
+    <!-- Animation -->
+    <video data-autoplay loop
+        src="gfx/texnet/single_real_test.mp4" 
+        poster="gfx/texnet/single_real_test.png"
+        width="80%"></video>
+</div>
+
+---
+
+<!-- .slide: class="layout-2x1" -->
+
+## Texture Fields
+
+Generative Model (VAE):
+
+<div class="column-1 figure" style="grid-template-columns: 33% 33% 33%; height: 300px; overflow: hidden;">
+    <!-- First object -->
+    <video data-autoplay loop 
+        src="gfx/texnet/police1.mp4"
+        poster="gfx/texnet/police1.png"
+        width="100%" style="object-fit: cover"></video>
+    <!-- Second object -->
+    <video data-autoplay loop
+        src="gfx/texnet/blackhat1.mp4"
+        poster="gfx/texnet/blackhat1.png"
+        width="100%" style="object-fit: cover"></video>
+    <!-- Third object -->
+    <video data-autoplay loop 
+        src="gfx/texnet/hummer1.mp4"
+        poster="gfx/texnet/hummer1.png"
+        width="100%" style="object-fit: cover"></video>
+</div>
+
+<div class="column-2 figure" style="grid-template-columns: 33% 33% 33%; height: 300px; overflow: hidden;">
+    <!-- First object -->
+    <video data-autoplay loop
+        src="gfx/texnet/police2.mp4" 
+        poster="gfx/texnet/police2.png"
+        width="100%" style="object-fit: cover"></video>
+    <!-- Second object -->
+    <video data-autoplay loop 
+        src="gfx/texnet/blackhat2.mp4"
+        poster="gfx/texnet/blackhat2.png"
+        width="100%" style="object-fit: cover"></video>
+    <!-- Third object -->
+    <video data-autoplay loop
+        src="gfx/texnet/hummer2.mp4"
+        poster="gfx/texnet/hummer2.png"
+        width="100%" style="object-fit: cover"></video>
+</div>
+
+---
+
+<!-- .slide: class="layout-2x1" -->
+
+## Texture Fields
+
+<div class="subtitle">Texture transfer (VAE):</div>
+
+<div class="flex-col">
+    <svg width=1200px height=900px version="1.1">
+        <image href="gfx/texnet/transfer_00.svg" y="0" x="0" width="100%" />
+        <image class="fragment" href="gfx/texnet/transfer_01.svg" y="0" x="0" width="100%" />
+        <image class="fragment" href="gfx/texnet/transfer_02.svg" y="0" x="0" width="100%" />
+    </svg>
+</div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Texture Fields
+
+<div class="subtitle">Visualizations (GT shape): </div>
+
+<div class="column-1 flex-col" style="grid-template-columns: 33% 33% 33%;">
+    <div class="figure">
+        <!-- Input -->
+        <img src="gfx/texnet/cut_in.jpg" width=100%>
+        <p>Input</p>
+        <!-- Center -->
+        <img class="fragment" data-fragment-index=0
+            src="gfx/texnet/cut_tex_gtshape.png" width=100%>
+        <p class="fragment" data-fragment-index=0>
+            Cut through center
+        </p>
+        <!-- Side -->
+        <img class="fragment" data-fragment-index=1
+            src="gfx/texnet/cut_tex_gtshape2.png" width=100%>
+        <p class="fragment" data-fragment-index=1>
+            Cut through side
+        </p>
     </div>
 </div>
 
 ---
 
+<!-- .slide: class="layout-1x1" -->
+
 ## Texture Fields
 
-Generative Model:
+<div class="subtitle">Visualizations (different shape): </div>
 
-<div class="flex-row flex-center row-12">
-    <video data-autoplay loop src="gfx/texnet/interpol.mp4" width="100%"></video>
+<div class="column-1 flex-col" style="grid-template-columns: 33% 33% 33%;">
+    <div class="figure">
+        <!-- Input -->
+        <img src="gfx/texnet/cut_in.jpg" width=100%>
+        <p>Input</p>
+        <!-- Center -->
+        <img src="gfx/texnet/cut_tex_difshape.png" width=100%>
+        <p>
+            Cut through center
+        </p>
+        <!-- Side -->
+        <img src="gfx/texnet/cut_tex_difshape2.png" width=100%>
+        <p>
+            Cut through side
+        </p>
+    </div>
 </div>

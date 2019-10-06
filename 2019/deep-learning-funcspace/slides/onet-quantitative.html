@@ -1,52 +1,25 @@
+<!-- .slide: class="layout-U" -->
+
 ## Quantitative Results
 
-<div class="flex-row" style="flex:1; align-items: center; text-align: center">
-<div class="col-6 fragment">
-<div>Single Image 3D Reconstruction:</div>
-<img src="gfx/onet/table_img2mesh_small.svg" width="80%">
+<div class="column-1 flex-col fragment">
+    <p>Single Image 3D Reconstruction:</p>
+    <img src="gfx/onet/table_img2mesh_small.svg" width="80%">
 </div>
 
-<div class="col-6 fragment">
-<div>Point Cloud Completion:</div>
-<img src="gfx/onet/table_pcl2mesh_small.svg" width="80%">
+<div class="column-2 flex-col fragment">
+    <p>Point Cloud Completion:</p>
+    <img src="gfx/onet/table_pcl2mesh_small.svg" width="80%">
 </div>
 
-</div>
 
-<div class="flex-row" style="width:100%; margin-left: 1em; margin-bottom: 2em">
-    <div>
-    <div class="fragment"><strong>Oberservations:</strong></div>
-    <ol style="font-size: 0.8em; margin-left:2em;">
-        <li class="fragment">Point Cloud Completion is easier</li>
-        <li class="fragment">IOU + Normal consistency: our method performs best</li>
-        <li class="fragment">Chamfer: PSGN, Pixel2Mesh, AtlasNet & DMC train on it</li>
-    </ol>
-    </div>
-</div>
-
----
-
-## Ablation Study
-
-<div class="flex-row" style="flex:1; align-items: center; text-align: center">
-<div class="col-6 fragment">
-    <div>Effect of Sampling Scheme:</div>
-    <img src="gfx/onet/ablations_sampling.svg" width="80%">
-</div>
-
-<div class="col-6 fragment">
-    <div>Effect of Architecture:</div>
-    <img src="gfx/onet/ablations_architecture.svg" width="80%">
-</div>
-</div>
-
-<div class="flex-row" style="width:100%; margin-left: 1em; margin-bottom: 2em">
-    <div>
-        <div class="fragment"><strong>Oberservations:</strong></div>
+<div class="column-3 flex-col">
+    <div style="text-align: left">
+        <strong class="fragment">Oberservations:</strong> <br>
         <ol style="font-size: 0.8em; margin-left:2em;">
-            <li class="fragment">Surprisingly, uniform sampling works best</li>
-            <li class="fragment">Sampling very few points also works</li>
-            <li class="fragment">ResNet blocks and CBN are helpful</li>
+            <li class="fragment">Point Cloud Completion is easier</li>
+            <li class="fragment">IOU + Normal consistency: our method performs best</li>
+            <li class="fragment">Chamfer: PSGN, Pixel2Mesh, AtlasNet & DMC train on it</li>
         </ol>
     </div>
 </div>
