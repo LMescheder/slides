@@ -1,0 +1,77 @@
+<!-- .slide: class="layout-1x1" -->
+
+## Texture Fields
+
+<strong>So far</strong>: 3D Reconstruction
+
+<div class="column-1 figure" style="grid-template-columns: 50% 50%; height: 800px;">
+    <!-- Input -->
+    <img src="gfx/onet/chair_07.png"
+        width=80% style="object-fit: cover; height: 600px;"></img>
+    <p>Input</p>
+    <!-- Output -->
+    <video data-autoplay loop
+        src="gfx/texnet/empty_onet.mp4"
+        poster="gfx/texnet/empty_onet.png"
+        width=80% style="object-fit: cover; height: 600px;"></video>
+    <p>Mesh</p>
+</div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Texture Fields
+
+<strong>Missing</strong>: Material + Texture
+
+<div class="column-1 figure" style="grid-template-columns: 50% 50%; height: 800px;">
+    <!-- Input -->
+    <img src="gfx/onet/chair_07.png"
+        width=80% style="object-fit: cover; height: 600px;"></img>
+    <p>Input</p>
+    <!-- Output -->
+    <video data-autoplay loop
+        src="gfx/texnet/single_onet.mp4"
+        poster="gfx/texnet/single_onet.png"
+        width=80% style="object-fit: cover; height: 600px;"></video>
+    <p>Mesh + Material</p>
+</div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Texture Fields
+
+<strong>Our approach</strong>: Predict continuous Texture Field
+
+<div class="column-1 flex-col">
+    <img src="gfx/texnet/teaser.svg" width=1000px>
+</div>
+
+<footer class="reference">
+    Oechsle, Mescheder, Niemeyer, Strauss & Geiger (ICCV 2019)
+</footer>
+
+---
+
+<!-- .slide: class="layout-1x2" -->
+
+## Texture Fields
+
+<div class="subtitle">
+    Texture Field:
+</div>
+
+<div class="column-1 flex-col">
+    <img src="gfx/texnet/cat_texnet.png" width="100%" style="object-fit: cover">
+</div>
+
+<div class="column-2">
+    <ul class="pro-contra" style="padding-left: 2em">
+        <li class="pro fragment">No discretization</li>
+        <li class="pro fragment">No discontinuities</li>
+        <li class="pro fragment">Independent of shape representation</li>
+    </ul>
+</div>

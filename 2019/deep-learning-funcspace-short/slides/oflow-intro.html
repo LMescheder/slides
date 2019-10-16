@@ -1,0 +1,108 @@
+<!-- .slide: class="layout-1x1" -->
+
+## Occupancy Flow
+
+<strong>So far</strong>: Static meshes
+
+<div class="column-1 figure" style="grid-template-columns: 40% 20% 40%; height: 800px;">
+    <!-- Input -->
+    <img src="gfx/oflow/input.png"
+        width=100% style="object-fit: cover; height: 600px;"></video>
+    <p>Input</p>
+    <!-- Network -->
+    <img src="gfx/onet/network.svg" width="60%">
+    <p>Neural Network</p> 
+    <!-- Output -->
+    <img src="gfx/oflow/oflow.png"
+        width=100% style="object-fit: cover; height: 600px;"></video>
+    <p>Static Mesh</p>
+</div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Occupancy Flow
+
+<strong>Missing</strong>: 3D Motion
+
+<div class="column-1 figure" style="grid-template-columns: 40% 20% 40%; height: 800px;">
+    <!-- Input -->
+    <video data-autoplay loop src="gfx/oflow/input.mp4" poster="gfx/oflow/input.png"
+        width=100% style="object-fit: cover; height: 600px;"></video>
+    <p>Input</p>
+    <!-- Network -->
+    <img src="gfx/onet/network.svg" width="60%">
+    <p>Neural Network</p>
+    <!-- Output -->
+    <video data-autoplay loop
+        src="gfx/oflow/oflow.mp4"
+        poster="gfx/oflow/oflow.png"
+        width=100% style="object-fit: cover; height: 600px;"></video>
+    <p>3D Motion</p>
+</div>
+
+---
+
+<!-- .slide: class="layout-U" -->
+
+## Occupancy Flow
+
+<div class="subtitle">
+    <strong>First idea</strong>: Generalize Occupancy Networks to 4D
+</div>
+
+<div class="column-1 flex-col" style="justify-content: space-evenly;">
+    <div class="fragment">
+        3D-Occupancy Network: <br>
+        $\mathbb R^3 \to [0, 1]$
+    </div>
+</div>
+
+<div class="column-2 flex-col" style="justify-content: space-evenly;">
+    <div class="fragment">
+        4D-Occupancy Network: <br>
+        $\mathbb R^3 \times [0, T] \to [0, 1]$
+    </div>
+</div>
+
+<div class="column-3 flex-col">
+    <ul class="pro-contra">
+        <li class="pro fragment">Continuous in both space and time</li>
+        <li class="contra fragment">Shape and motion not disentangled</li>
+        <li class="contra fragment">No correspondences over time</li>
+        <li class="contra fragment">Slow inference</li>
+    </ul>
+</div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Occupancy Flow
+
+<strong>Our idea</strong>: Decompose into Occupancy Network and Velocity Network
+
+<div class="column-1">
+    <div class="figure fragment" data-fragment-index=1 style="grid-template-columns: 33% 33% 33%">
+        <!-- First example -->
+        <video data-autoplay loop
+            src="gfx/oflow/jumping_jacks.mp4"
+            poster="gfx/oflow/jumping_jacks.png"
+            width="90%"></video>
+        <!-- Second example -->
+        <video data-autoplay loop
+            src="gfx/oflow/leg_jump.mp4"
+            poster="gfx/oflow/leg_jump.png"
+            width="90%"></video>
+        <!-- Third example -->
+        <video data-autoplay loop
+            src="gfx/oflow/shake_hips.mp4"
+            poster="gfx/oflow/shake_hips.png"
+            width="90%"></video>
+    </div>
+</div>
+
+<footer class="fragment reference" data-fragment-index=1>
+    Niemeyer, Mescheder, Oechsle & Geiger (ICCV 2019)
+</footer>

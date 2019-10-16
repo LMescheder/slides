@@ -1,0 +1,83 @@
+<!-- .slide: class="layout-1x1" -->
+
+## Our Approach
+
+<div class="flex-row" style="justify-content: flex-start; align-items: flex-start; margin-left: 1em">
+    <strong>Idea:</strong>
+    <div style="flex: 1; margin-left: 0.5em; text-align: left;">
+        Represent mesh as continuous decision boundary of deep learning classifier
+    </div>
+</div>
+
+<div class="column-1" style="height: 700px">
+    <!-- Teaser -->
+    <video data-autoplay loop
+        src="gfx/onet/teaser.mp4"
+        poster="gfx/onet/teaser.png"
+        width="50%" style="object-fit: cover"></video>
+</div>
+
+---
+
+<!-- .slide: class="layout-1x2" -->
+
+## Our Approach
+
+<div class="subtitle flex-row" style="justify-content: flex-start; align-items: flex-start; margin-left: 1em">
+    <strong>Idea:</strong>
+    <div style="flex: 1; margin-left: 0.5em; text-align: left;">
+        Represent mesh as continuous decision boundary of deep learning classifier
+    </div>
+</div>
+
+<div class="column-1 flex-col">
+    <img src="gfx/onet/ours.svg" width="50%">
+</div>
+
+<div class="column-2">
+    <ul class="pro-contra" style="padding-left: 2em">
+        <li class="pro fragment">Infinite Resolution</li>
+        <li class="pro fragment">Arbitrary Topologies</li>
+        <li class="pro fragment">Watertight Meshes</li>
+    </ul>
+</div>
+
+<footer class="reference">
+    Mescheder, Oechsle, Niemeyer, Nowozin & Geiger (CVPR 2019)
+</footer>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Architecture
+
+<div class="column-1 flex-col">
+    <svg width=1800px height=900px>
+        <image href="gfx/onet/architecture_00.svg" y="0" x="0" width="100%" height="100%"/>
+        <image class="fragment" href="gfx/onet/architecture_01.svg" y="0" x="0" width="100%" height="100%"/>
+    </svg>
+</div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Inference
+
+Multiresolution IsoSurface Extraction (MISE):
+
+<div class="column-1 flex-col">
+    <svg width=1800px height=520px>
+        <image href="gfx/onet/inference_00.svg" y="0" x="0" width="100%" height="100%"/>
+        <image class="fragment" href="gfx/onet/inference_01.svg" y="0" x="0" width="100%" height="100%" />
+        <image class="fragment" href="gfx/onet/inference_02.svg" y="0" x="0" width="100%" height="100%"/>
+        <image class="fragment" href="gfx/onet/inference_03.svg" y="0" x="0" width="100%" height="100%"/>
+        <image class="fragment" href="gfx/onet/inference_04.svg" y="0" x="0" width="100%" height="100%"/>
+        <image class="fragment" href="gfx/onet/inference_05.svg" y="0" x="0" width="100%" height="100%"/>
+        <image class="fragment" href="gfx/onet/inference_06.svg" y="0" x="0" width="100%" height="100%"/>
+        <image class="fragment" href="gfx/onet/inference_07.svg" y="0" x="0" width="100%" height="100%"/>
+        <image class="fragment" href="gfx/onet/inference_08.svg" y="0" x="0" width="100%" height="100%"/>
+        <image class="fragment" href="gfx/onet/inference_09.svg" y="0" x="0" width="100%" height="100%"/>
+    </svg>
+</div>
