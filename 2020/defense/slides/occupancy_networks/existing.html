@@ -1,0 +1,103 @@
+<!-- .slide: class="layout-1x2" -->
+
+## Existing Representations
+
+<div class="column-1 flex-col">
+    <!-- Animation -->
+    <video data-autoplay loop
+        src="/assets/2019_occupancy_networks/reconstructions/bench_04_img_r2n2.webm"
+        poster="/assets/2019_occupancy_networks/reconstructions/bench_04_img_r2n2.jpg"
+        width="80%" style="object-fit: cover"></video>
+</div>
+
+<div class="column-2">
+    <ul class="pro-contra" style="padding-left: 2em">
+        <li class="pro fragment">Simple</li>
+        <li class="contra fragment">Cubic (!) Memory</li>
+        <li class="contra fragment">Manhattan World</li>
+    </ul>
+</div>
+
+<footer>
+    <p style="text-align: center">Voxels</p>
+    <p class="reference"> [Choy et al, ECCV 2016]</p>
+</footer>
+
+---
+
+<!-- .slide: class="layout-1x2" -->
+
+## Existing Representations
+
+<div class="column-1 flex-col">
+    <!-- Animation -->
+    <video data-autoplay loop
+        src="/assets/2019_occupancy_networks/reconstructions/bench_04_img_psgn.webm"
+        poster="/assets/2019_occupancy_networks/reconstructions/bench_04_img_psgn.jpg"
+        width="80%" style="object-fit: cover"></video>
+</div>
+
+<div class="column-2">
+    <ul class="pro-contra" style="padding-left: 2em">
+        <li class="pro fragment">Fast and easy</li>
+        <li class="contra fragment">No Connectivity</li>
+        <li class="contra fragment">Lossy Postprocessing</li>
+    </ul>
+</div>
+
+<footer>
+    <p style="text-align: center">Point Cloud</p>
+    <p class="reference"> [Fan et al, CVPR 2017]</p>
+</footer>
+
+---
+
+<!-- .slide: class="layout-1x2" -->
+
+## Existing Representations
+
+<div class="column-1 flex-col">
+    <!-- Animation -->
+    <video data-autoplay loop
+        src="/assets/2019_occupancy_networks/reconstructions/bench_04_img_atlasnet.webm"
+        poster="/assets/2019_occupancy_networks/reconstructions/bench_04_img_atlasnet.jpg"
+        width="80%" style="object-fit: cover"></video>
+</div>
+
+<div class="column-2">
+    <ul class="pro-contra" style="padding-left: 2em">
+        <li class="pro fragment">Natural</li>
+        <li class="contra fragment">Needs template</li>
+        <li class="contra fragment">Self-intersections</li>
+    </ul>
+</div>
+
+<footer>
+    <p style="text-align: center">Mesh</p>
+    <p class="reference"> [Groueix et al, CVPR 2018]</p>
+</footer>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+
+## Existing Representations
+
+<div class="column-1 flex-col" style="justify-content: space-evenly">
+    <div class="figure">
+        <img src="/assets/2019_occupancy_networks/teaser/voxel.svg" width="60%">
+        <p>Voxels</p>
+        <img src="/assets/2019_occupancy_networks/teaser/point.svg" width="60%">
+        <p>Point Cloud</p>
+        <img src="/assets/2019_occupancy_networks/teaser/mesh.svg" width="60%">
+        <p>Mesh</p>
+    </div>
+    <div class="box-highlighted fragment"
+        style="text-align: center; padding: 0.5% 2%; font-size: 1.5em;">
+        Discretization artifacts
+    </div>
+</div>
+
+
+

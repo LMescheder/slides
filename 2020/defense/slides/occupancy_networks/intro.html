@@ -1,0 +1,147 @@
+<!-- .slide: class="layout-2x1" -->
+
+## Are we done?
+
+<!-- 2D vs. 3D Representations: -->
+<div class="column-1 figure" style="grid-template-columns: 50 50%; height: 700px">
+    <!-- Input -->
+    <img src="/assets/2019_occupancy_networks/motivation/tuebingen.jpg" height="700px" />
+    <p>2D</p>
+    <!-- Output -->
+    <video data-autoplay loop 
+        class="fragment" data-fragment-index=1
+        height="700px"
+        style="object-fit: cover"
+        src="/assets/2019_occupancy_networks/motivation//tuebingen.webm"
+        poster="/assets/2019_occupancy_networks/reconstructions/car_13_voxels_onet.jpg">
+    </video>
+    <p class="fragment" data-fragment-index=1>3D</p>
+</div>
+
+<div class="column-2 flex-row">
+    <div class="column-2 fragment flex-row"
+        style="width: 1000px; align-self: center; text-align: left;">
+        <img src="/assets/misc/symbols/arrow.svg" width="150px" height="100px">
+        <div>
+            Our world is not 2D, but 3D!
+        </div>
+    </div>
+</div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Neural Networks in 2D
+
+Convolutional Neural Networks:
+
+<div class="figure" style="grid-template-columns: 40% 20% 40%; height: 600px">
+    <!-- Input -->
+    <img src="/assets/2019_occupancy_networks/motivation/input_img.svg"
+        width=95% >
+    <p>Input</p>
+    <!-- Network -->
+    <img src="/assets/2019_occupancy_networks/motivation/network.svg" width=55%>
+    <p>Neural Network</p>
+    <!-- Output -->
+    <img src="/assets/2019_occupancy_networks/motivation/output_stack.svg" width=95% >
+    <p>Output</p>
+</div>
+
+<footer class="reference" style="visibility: hidden"> 
+    Mescheder, Nowozin & Geiger (ICML 2018)
+</p>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Neural Networks in 2D
+
+Generative Adversarial Networks:
+
+<div class="figure" style="grid-template-columns: 40% 20% 40%; height: 600px">
+    <!-- Input -->
+    <div class="subfig flex-col">
+        <img src="/assets/2018_gan_stability/motivation/gaussian.svg" width="90%">
+        <div>$z \sim \mathcal N(0, I_n)$</div>
+    </div>
+    <p>Input</p>
+    <!-- Network -->
+    <img src="/assets/2019_occupancy_networks/motivation/network.svg" width=55%>
+    <p>Neural Network</p>
+    <!-- Output -->
+    <video data-autoplay loop
+        src="/assets/2018_gan_stability/results/celebAHQ.webm"
+        poster="/assets/gan/celebAHQ.jpg"
+        height="500px" width="500px" style="object-fit: cover; object-position: 100% 0%"></video>
+    <p>Output</p>
+</div>
+
+<p class="reference"> 
+    Mescheder, Nowozin & Geiger (ICML 2018)
+</p>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Neural Networks in 3D
+
+Single Image 3D Reconstruction:
+
+<div class="figure" style="grid-template-columns: 40% 20% 40%; height: 600px">
+    <!-- Input -->
+    <img src="/assets/2019_occupancy_networks/motivation/car_13.svg" width="60%">
+    <p>Input</p>
+    <!-- Network -->
+    <img src="/assets/2019_occupancy_networks/motivation/network.svg" width="55%">
+    <p>Neural Network</p>
+    <!-- Output -->
+    <video data-autoplay loop
+        src="/assets/2019_occupancy_networks/reconstructions/car_13_voxels_onet.webm"
+        poster="/assets/2019_occupancy_networks/reconstructions/car_13_voxels_onet.jpg"
+        width="100%" height="500px" style="object-fit: cover"></video>
+    <p>3D-Mesh</p>
+</div>
+
+<p class="reference" style="visibility: hidden">
+    Mescheder, Nowozin & Geiger (ICML 2018)
+</p>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Neural Networks in 3D
+
+Generative Model in 3D:
+
+<div class="figure" style="grid-template-columns: 40% 20% 40%; height: 600px; position: relative;">
+    <div class="subfig flex-col">
+        <img width="90%" src="/assets/2018_gan_stability/motivation/gaussian.svg">
+        <div>$z \sim \mathcal N(0, I_n)$</div>
+    </div>
+    <img width="55%" src="/assets/2019_occupancy_networks/motivation/network.svg">
+    <video data-autoplay loop
+        src="/assets/2019_occupancy_networks/latent_interpolations/seq_car.webm"
+        poster="/assets/onet/seq_car.jpg"
+        width="100%" height="500px" style="object-fit: cover"></video>
+    <p>Input</p>
+    <p>Neural Network</p>
+    <p>3D-Mesh</p>
+</div>
+
+<p class="reference" style="visibility: hidden"> [Mescheder et al, ICML 2018]</p>
+
+<div class="fragment" 
+    style="position: absolute; top: 30%; left: 63%; z-index: 1">
+    <div class="box-highlighted"
+        style="width: 700px; height: 650px; "></div>
+    <div style="padding: 10px;">What is the Output?</div>
+</div>
+<!-- <img class="fragment"
+    style="position: absolute; top: 30%; left: 63%; z-index: 1"
+    width="35%" 
+    src="/assets/2019_occupancy_networks/motivation/output_rect.svg"> -->
