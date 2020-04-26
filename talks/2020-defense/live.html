@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<base href="../..">
+
+		<title>Stability and Expressiveness of Deep Generative Models</title>
+
+		<link rel="stylesheet" href="lib/reveal/css/reset.css">
+		<link rel="stylesheet" href="lib/reveal/css/reveal.css">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/reveal/lib/css/monokai.css">
+
+		<!-- Theme: choose either from lib/reveal/css/theme or take custom -->
+		<link rel="stylesheet" href="css/theme/mytheme.css">
+		<!-- <link rel="stylesheet" href="lib/reveal/css/theme/black.css"> -->
+
+		<!-- Layout based on flex boxes -->
+		<link rel="stylesheet" href="css/flex-layout.css">
+
+		<!-- Custom style sheet -->
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) 
+				? 'lib/reveal/css/print/pdf.css'
+				: 'lib/reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Add your slides here -->
+				<section data-markdown="slides/2020-defense/title.html"></section>	
+				<section data-markdown="slides/2020-defense/link.html"></section>
+				<section data-markdown="slides/2020-defense/people.html"></section>
+				<section data-markdown="slides/2020-defense/intro.html"></section>
+				<section data-markdown="slides/2019-gan-dynamics/intro.html"></section>
+				<section data-markdown="slides/2019-gan-dynamics/theory.html"></section>
+				<section data-markdown="slides/2019-gan-dynamics/results.html"></section>
+				<section data-markdown="slides/2019-gan-dynamics/outlook.html"></section>
+				<section data-markdown="slides/2020-defense/transition.html"></section>
+				<section data-markdown="slides/2019-occupancy-networks/intro.html"></section>
+				<section data-markdown="slides/2019-occupancy-networks/existing.html"></section>
+				<section data-markdown="slides/2019-occupancy-networks/approach.html"></section>
+				<section data-markdown="slides/2019-occupancy-networks/single-img.html"></section>		
+				<section data-markdown="slides/2019-occupancy-networks/pcl-compl.html"></section>
+				<section data-markdown="slides/2019-occupancy-networks/voxel-super.html"></section>
+				<section data-markdown="slides/2019-occupancy-networks/generative.html"></section>
+				<section data-markdown="slides/2019-occupancy-networks/quantitative_v2.html"></section>
+				<section data-markdown="slides/2020-defense/funcspace-operator.html"></section>
+				<section data-markdown="slides/2020-defense/references.html"></section>
+			</div>
+		</div>
+
+		<script src="lib/reveal/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				width: 1920,
+				height: 1080,
+				margin: 0,
+				minScale: 0.1,
+				maxScale: 10,
+				center: false,
+				history: true,
+				display: "grid",
+				transition: "fade",
+				controlsTutorial: false,
+				hash: true,
+				pdfMaxPagesPerSlide: 1,
+				multiplex: {
+					secret: null,
+					id: 'c2c50b746646e316',
+					url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
+				},
+				dependencies: [
+					{ src: 'lib/reveal/plugin/markdown/marked.js' },
+					{ src: 'lib/reveal/plugin/markdown/markdown.js' },
+					{ src: 'lib/reveal/plugin/notes/notes.js', async: true },
+					{ src: 'lib/reveal/plugin/highlight/highlight.js', async: true },
+					{ src: 'lib/reveal/plugin/math/math.js', async: true },
+					{ src: 'lib/reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
+					{ src: 'lib/reveal/plugin/multiplex/client.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

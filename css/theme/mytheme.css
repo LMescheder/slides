@@ -313,3 +313,16 @@ body {
 @media print {
   .backgrounds {
     background-color: #fff; } }
+
+/* Custom */
+.box-highlighted {
+  padding: 20px; 
+  border: 10px solid #FFC07F; 
+  border-radius: 30px;
+}
+
+.box-highlighted-strong {
+  padding: 20px; 
+  border: 10px solid #FFC07F; 
+  border-radius: 30px;
+}

@@ -58,15 +58,10 @@ ul.pro-contra li.contra:before {
   text-align: center;
 }
 
-.box-highlighted {
-  padding: 20px; 
-  border: 10px solid #FFC07F; 
-  border-radius: 30px;
-}
+.reveal .slides section .fragment.strike-through {
+  opacity: 1;
+  visibility: inherit; }
 
-.box-highlighted-strong {
-  padding: 20px; 
-  border: 10px solid #FFC07F; 
-  border-radius: 30px;
-}
-
+.reveal .slides section .fragment.strike-through.visible {
+   text-decoration: line-through;
+ }
