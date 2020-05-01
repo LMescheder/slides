@@ -1,0 +1,44 @@
+<!-- .slide: class="layout-1x1"" -->
+
+## General Convergence Results
+
+<div class="subtitle flex-row" style="padding: 0 50px;">
+    <div style="text-align:left;">
+        Proof (idea):
+    </div>
+    <div style="flex: 1; text-align:right;">
+        (Extends prior work by Nagarajan & Kolter)
+    </div>
+</div>
+
+<div class="column-1 flex-col">
+    <div class="fragment">
+        $$
+        \tilde v_i(\theta, \psi)
+        :=
+        \begin{pmatrix}
+        - \nabla_\theta L(\theta, \psi) \\
+        \nabla_\psi L(\theta, \psi) - \nabla_\psi R_i(\theta, \psi)
+        \end{pmatrix}
+        $$
+    </div>
+    <div class="fragment">
+        $$
+        \Rightarrow
+        \tilde v^\prime(\theta^*, \psi^*)
+        = \begin{pmatrix}
+        0 & -K_{DG}^\intercal \\
+        K_{DG} & K_{DD} - L_{DD}
+        \end{pmatrix}
+        $$
+    </div>
+    <div class="fragment">
+        <strong>Here</strong>: $K_{DD} - L_{DD}$ negative definite and $K_{DG}$ has full column rank.
+    </div>
+    <div class="fragment">
+        $\Rightarrow$
+        All eigenvalues of
+        $\tilde v^\prime(\theta^*, \psi^*)$
+        have negative real part
+    </div>
+</div>

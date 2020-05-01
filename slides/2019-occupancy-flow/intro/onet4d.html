@@ -1,0 +1,30 @@
+<!-- .slide: class="layout-U" -->
+
+## Occupancy Flow
+
+<div class="subtitle">
+    <strong>First idea</strong>: Generalize Occupancy Networks to 4D
+</div>
+
+<div class="column-1 flex-col" style="justify-content: space-evenly;">
+    <div class="fragment">
+        3D-Occupancy Network: <br>
+        $\mathbb R^3 \to [0, 1]$
+    </div>
+</div>
+
+<div class="column-2 flex-col" style="justify-content: space-evenly;">
+    <div class="fragment">
+        4D-Occupancy Network: <br>
+        $\mathbb R^3 \times [0, T] \to [0, 1]$
+    </div>
+</div>
+
+<div class="column-3 flex-col">
+    <ul class="pro-contra">
+        <li class="pro fragment">Continuous in both space and time</li>
+        <li class="contra fragment">Shape and motion not disentangled</li>
+        <li class="contra fragment">No correspondences over time</li>
+        <li class="contra fragment">Slow inference</li>
+    </ul>
+</div>

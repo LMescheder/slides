@@ -1,0 +1,90 @@
+<!-- .slide: class="layout-1x2" -->
+
+## Loss Function
+
+<div class='subtitle'>
+Loss for supervised model:
+</div>
+
+<div class="column-1">
+    <div class="fragment" style="font-size: .9em;" 
+        data-fragment-index=0>
+        $$
+        \mathcal L_\color{darkorange}{\mathcal{B}}
+            (\color{blue}{\theta})
+        = \frac{1}{|\color{darkorange}{\mathcal{B}}|}
+        \sum_{i=1}^{|\color{darkorange}{\mathcal{B}}|}
+         \sum_{j=1}^ K \color{red}{\mathcal{L}}
+         (
+            \color{darkgreen}{f}_\color{blue}{\theta}
+            (\color{purple}{p_{ij}}, \color{brown}{x_i}), 
+            \color{olive}{o_{ij}}
+        )
+        $$
+    </div>
+</div>
+<div class="column-2" style="font-size: .8em;">
+    <table>
+        <thead class="fragment" data-fragment-index=1>
+            <tr>
+                <th>Symbol</th>
+                <th>Meaning</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="fragment" data-fragment-index=1>
+                <td>$\color{darkgreen}{f}$</td>
+                <td>Occupancy Network</td>
+            </tr>
+            <tr class="fragment">
+                <td>$\color{blue}{\theta}$</td>
+                <td>Parameter vector</td>
+            </tr>
+            <tr class="fragment">
+                <td>$\color{darkorange}{\mathcal{B}}$</td>
+                <td>batch of data samples
+                    $(
+                        \color{brown}{x_i},
+                        \color{purple}{p_{ij}},
+                        \color{olive}{o_{ij}}
+                    )$
+                </td>
+            </tr>
+            <tr class="fragment">
+                <td>$\color{brown}{x_i}$</td>
+                <td>$|\mathcal{B}|$ observations (e.g. images)</td>
+            </tr>
+            <tr class="fragment">
+                <td>$\color{purple}{p_{ij}}$</td>
+                <td>$|\mathcal{B}| \times K$ random locations</td>
+            </tr>
+            <tr class="fragment">
+                <td>$\color{olive}{o_{ij}}$</td>
+                <td>$|\mathcal{B}| \times K$ ground truth occupancies</td>
+            </tr>
+            <tr class="fragment">
+                <td>$\color{red}{\mathcal L}$</td>
+                <td>cross-entropy loss</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- <div class="column-2 fragment">
+    <div>Loss for unsupervised model:</div>
+    <div style="font-size: .8em;">
+        $$\mathcal L^{\text{gen}}_{\mathcal B}(\theta, \color{red}{\psi})
+        = \frac{1}{|\mathcal B|} \sum_{i=1}^{|\mathcal B|}
+        \Bigl[\sum_{j=1}^ K \mathcal L(f_\theta(p_{ij}, \color{red}{z_i}), o_{ij}) \\
+        + \color{red}{\mathrm{KL} \left(q_\psi(z | (p_{ij}, o_{ij})_{j=1:K}) \,\|\, p_0(z) \right) }
+        \Bigr]
+        $$
+    </div>
+    <div style="font-size: .9em;">
+        <ul>
+            <li style="margin: 0">$p_0$: prior for latent $z$</li>
+            <li style="margin: 0">$q_\psi$: (approximate) posterior</li>
+            <li style="margin: 0">$z_i$: random sample from $q_\psi$ </li>
+        </ul>
+    </div>
+</div> -->

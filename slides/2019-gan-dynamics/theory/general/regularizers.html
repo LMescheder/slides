@@ -1,0 +1,34 @@
+<!-- .slide: class="layout-2x1" -->
+
+## General Convergence Results
+
+
+<div class="column-1">
+    Regularizers for discriminator:
+    $$\begin{split}
+    R_1(\psi) & :=
+    \frac{\gamma}{2}
+    \mathrm E_{p_{\mathcal D}(x)}
+    \left[
+    \|\nabla_x D_\psi(x) \|^2
+    \right]\\
+    R_2(\theta, \psi) & :=
+    \frac{\gamma}{2}
+    \mathrm E_{p_\theta(x)}
+    \left[
+    \|\nabla_x D_\psi(x) \|^2
+    \right]
+    \end{split}$$
+</div>
+
+<div class="column-2 fragment">
+    Regularized gradient vector field
+    $$
+    \tilde v_i(\theta, \psi)
+    :=
+    \begin{pmatrix}
+    - \nabla_\theta L(\theta, \psi) \\
+    \nabla_\psi L(\theta, \psi) - \nabla_\psi R_i(\theta, \psi)
+    \end{pmatrix}
+    $$
+</div>

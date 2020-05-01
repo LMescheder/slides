@@ -1,0 +1,50 @@
+<!-- .slide: class="layout-1x1" -->
+
+## Experiments
+
+Simple 2D Distributions:
+
+<div class="column-1 flex-col">
+    <table style="width: 90%; font-size: .8em;">
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th class="fragment" data-fragment-index=1 style="text-align: center">
+                    unregularized
+                </th>
+                <th class="fragment" data-fragment-index=2 style="text-align: center">
+                    WGAN-GP $(n_d=1)$
+                </th>
+                <th class="fragment" data-fragment-index=3 style="text-align: center">
+                    WGAN-GP $(n_d=5)$
+                </th>
+                <th class="fragment" data-fragment-index=4 style="text-align: center">
+                    $R_1$-regularized
+                </th>
+                <th class="fragment" data-fragment-index=4 style="text-align: center">
+                    $R_2$-regularized
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Wasserstein-1-distance</td>
+                <td class="fragment" data-fragment-index=1 style="text-align: center">
+                    0.112
+                </td>
+                <td class="fragment" data-fragment-index=2 style="text-align: center">
+                    0.352
+                </td>
+                <td class="fragment" data-fragment-index=3 style="text-align: center">
+                    0.092
+                </td>
+                <td class="fragment" data-fragment-index=4 style="text-align: center">
+                    0.080
+                </td>
+                <td class="fragment" data-fragment-index=4 style="text-align: center">
+                    <strong>0.078</strong>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

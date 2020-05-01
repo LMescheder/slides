@@ -1,8 +1,16 @@
-.portrait {
+div.portrait {
   padding-top: 110%;
   background-position: center; 
   background-size: cover;
   border-radius: 10%;
+}
+
+img.portrait {
+  /* padding-top:; */
+  /* background-position: center; 
+  background-size: cover; */
+  border-radius: 10%;
+  object-fit: cover;
 }
 
 .img {

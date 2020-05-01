@@ -1,0 +1,37 @@
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Convergence Theory
+
+<div class="subtitle" style="height: 150px">
+    Zero-centered gradient penalties
+    <p><span style="font-size: 80%;">
+            $
+            R(\psi)
+            :=
+            \frac{\gamma}{2}
+            \mathrm E_{p_{\mathcal D}(x)}
+            \left[
+            \|\nabla_x D_\psi(x) \|^2
+            \right]
+            $
+        </span></p>
+</div>
+
+<div class="column-1 flex-col">
+    <div style="width: 85%">
+        <video data-autoplay loop src="assets/2018_gan_stability/dirac_gan/gan_gradpen.webm" width="100%">
+    </div>
+    <div>
+        Eigenvalues:
+        <span style="font-size: 70%;">
+            $
+            \left\{
+            -\frac{\gamma}{2} - \sqrt{\frac{\gamma^2}{4} - f^\prime(0)^2},
+            -\frac{\gamma}{2} + \sqrt{\frac{\gamma^2}{4} - f^\prime(0)^2}
+            \right\}
+            $
+        </span>
+    </div>
+</div>

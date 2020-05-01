@@ -1,0 +1,86 @@
+<!-- .slide: class="layout-1x1" -->
+
+## Quantitative Results
+
+Single Image 3D Reconstruction:
+
+<div class="column-1 flex-col">
+    <table style="width: 90%; font-size: .8em;">
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th class="fragment" data-fragment-index=1 style="text-align: center">
+                    IOU
+                </th>
+                <th class="fragment" data-fragment-index=2 style="text-align: center">
+                    Chamfer-$L_1$
+                </th>
+                <th class="fragment" data-fragment-index=3 style="text-align: center">
+                    Normal <br> Consistency
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>3D-R2N2</td>
+                <td class="fragment" data-fragment-index=1 style="text-align: center">
+                    49.3%
+                </td>
+                <td class="fragment" data-fragment-index=2 style="text-align: center">
+                    0.278
+                </td>
+                <td class="fragment" data-fragment-index=3 style="text-align: center">
+                    0.695
+                </td>
+            </tr>
+            <tr>
+                <td>PSGN</td>
+                <td class="fragment" data-fragment-index=1 style="text-align: center">
+                    -
+                </td>
+                <td class="fragment" data-fragment-index=2 style="text-align: center">
+                    0.215
+                </td>
+                <td class="fragment" data-fragment-index=3 style="text-align: center">
+                    -
+                </td>
+            </tr>
+            <tr>
+                <td>Pixel2Mesh</td>
+                <td class="fragment" data-fragment-index=1 style="text-align: center">
+                    48.0%
+                </td>
+                <td class="fragment" data-fragment-index=2 style="text-align: center">
+                    0.216
+                </td>
+                <td class="fragment" data-fragment-index=3 style="text-align: center">
+                    0.772
+                </td>
+            </tr>
+            <tr>
+                <td>AtlasNet</td>
+                <td class="fragment" data-fragment-index=1 style="text-align: center">
+                    -
+                </td>
+                <td class="fragment" data-fragment-index=2 style="text-align: center">
+                    <strong>0.175</strong>
+                </td>
+                <td class="fragment" data-fragment-index=3 style="text-align: center">
+                    0.811
+                </td>
+            </tr>
+            <tr>
+                <td>ONet</td>
+                <td class="fragment" data-fragment-index=1 style="text-align: center">
+                    <strong>57.1%</strong>
+                </td>
+                <td class="fragment" data-fragment-index=2 style="text-align: center">
+                    0.215
+                </td>
+                <td class="fragment" data-fragment-index=3 style="text-align: center">
+                    <strong>0.834</strong>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

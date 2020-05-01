@@ -1,0 +1,32 @@
+<!-- .slide: class="layout-1x1" -->
+
+## Convergence Theory
+
+<div class="column-1 flex-col">
+    <div>
+        Understanding the <strong>gradient vector field</strong>:
+        $$
+        v(\theta, \psi)
+        =
+        \begin{pmatrix}
+        - \nabla_\theta L(\theta, \psi) \\
+        \nabla_\psi L(\theta, \psi)
+        \end{pmatrix}
+        $$
+    </div>
+    <div class="fragment">
+        <strong>Local convergence</strong> of simultaneous and
+        alternating gradient descent determined by <strong>eigenvalues</strong>
+        of the Jacobian
+        $$
+        v^\prime(\theta^*, \psi^*)
+        =
+        \begin{pmatrix}
+        - \nabla^2_\theta L(\theta, \psi)
+        & -\nabla_{\theta,\psi} L(\theta, \psi) \\
+        \nabla_{\theta,\psi} L(\theta, \psi)
+        & \nabla^2_\psi L(\theta, \psi)
+        \end{pmatrix}
+        $$
+    </div>
+</div>
