@@ -313,6 +313,12 @@ body {
 
 
 /* Custom */
+.box {
+  padding: 20px; 
+  border: 10px solid gray; 
+  border-radius: 30px;
+}
+
 .box-highlighted {
   padding: 20px; 
   border: 10px solid skyblue; 

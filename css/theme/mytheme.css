@@ -315,6 +315,12 @@ body {
     background-color: #fff; } }
 
 /* Custom */
+.box {
+  padding: 20px; 
+  border: 10px solid #89AAE6; 
+  border-radius: 30px;
+}
+
 .box-highlighted {
   padding: 20px; 
   border: 10px solid #FFC07F; 
