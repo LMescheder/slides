@@ -3,11 +3,12 @@
 ## Loss Function
 
 <div class='subtitle'>
-Loss for supervised model:
+<h3>Loss for supervised model:</h3>
 </div>
 
-<div class="column-1">
-    <div class="fragment" style="font-size: .9em;" 
+<div class="column-1 flex-col">
+    <div class="flex-col fragment box"
+        style="align-self: center; width: 900px; height: 400px; font-size: .85em" 
         data-fragment-index=0>
         $$
         \mathcal L_\color{darkorange}{\mathcal{B}}
@@ -16,8 +17,8 @@ Loss for supervised model:
         \sum_{i=1}^{|\color{darkorange}{\mathcal{B}}|}
          \sum_{j=1}^ K \color{red}{\mathcal{L}}
          (
-            \color{darkgreen}{f}_\color{blue}{\theta}
-            (\color{purple}{p_{ij}}, \color{brown}{x_i}), 
+            \color{blue}{f_\theta}
+            (\color{purple}{s_{ij}}, \color{brown}{y_i}), 
             \color{olive}{o_{ij}}
         )
         $$
@@ -33,29 +34,25 @@ Loss for supervised model:
         </thead>
         <tbody>
             <tr class="fragment" data-fragment-index=1>
-                <td>$\color{darkgreen}{f}$</td>
+                <td>$\color{blue}{f_\theta}$</td>
                 <td>Occupancy Network</td>
-            </tr>
-            <tr class="fragment">
-                <td>$\color{blue}{\theta}$</td>
-                <td>Parameter vector</td>
             </tr>
             <tr class="fragment">
                 <td>$\color{darkorange}{\mathcal{B}}$</td>
                 <td>batch of data samples
                     $(
-                        \color{brown}{x_i},
-                        \color{purple}{p_{ij}},
+                        \color{brown}{y_i},
+                        \color{purple}{s_{ij}},
                         \color{olive}{o_{ij}}
                     )$
                 </td>
             </tr>
             <tr class="fragment">
-                <td>$\color{brown}{x_i}$</td>
+                <td>$\color{brown}{y_i}$</td>
                 <td>$|\mathcal{B}|$ observations (e.g. images)</td>
             </tr>
             <tr class="fragment">
-                <td>$\color{purple}{p_{ij}}$</td>
+                <td>$\color{purple}{s_{ij}}$</td>
                 <td>$|\mathcal{B}| \times K$ random locations</td>
             </tr>
             <tr class="fragment">
@@ -75,14 +72,14 @@ Loss for supervised model:
     <div style="font-size: .8em;">
         $$\mathcal L^{\text{gen}}_{\mathcal B}(\theta, \color{red}{\psi})
         = \frac{1}{|\mathcal B|} \sum_{i=1}^{|\mathcal B|}
-        \Bigl[\sum_{j=1}^ K \mathcal L(f_\theta(p_{ij}, \color{red}{z_i}), o_{ij}) \\
-        + \color{red}{\mathrm{KL} \left(q_\psi(z | (p_{ij}, o_{ij})_{j=1:K}) \,\|\, p_0(z) \right) }
+        \Bigl[\sum_{j=1}^ K \mathcal L(f_\theta(s_{ij}, \color{red}{z_i}), o_{ij}) \\
+        + \color{red}{\mathrm{KL} \left(q_\psi(z | (s_{ij}, o_{ij})_{j=1:K}) \,\|\, s_0(z) \right) }
         \Bigr]
         $$
     </div>
     <div style="font-size: .9em;">
         <ul>
-            <li style="margin: 0">$p_0$: prior for latent $z$</li>
+            <li style="margin: 0">$s_0$: prior for latent $z$</li>
             <li style="margin: 0">$q_\psi$: (approximate) posterior</li>
             <li style="margin: 0">$z_i$: random sample from $q_\psi$ </li>
         </ul>

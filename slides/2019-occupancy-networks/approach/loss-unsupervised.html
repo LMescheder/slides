@@ -3,17 +3,18 @@
 ## Loss Function
 
 <div class='subtitle'>
-    Loss for generative model (VAE):
+    <h3>Loss for generative model (VAE):</h3>
 </div>
 
-<div class="column-1">
-    <div style="font-size: .8em;">
+<div class="column-1 flex-col">
+    <div class="flex-col box"
+        style="align-self: center; width: 900px; height: 400px; font-size: .75em;">
         $$\mathcal L^{\text{gen}}_{\mathcal B}(\theta, \color{blue}{\psi})
         = \frac{1}{|\mathcal B|} \sum_{i=1}^{|\mathcal B|}
-        \Bigl[\sum_{j=1}^ K \mathcal L(f_\theta(p_{ij}, \color{purple}{z_i}), o_{ij}) \\
+        \Bigl[\sum_{j=1}^ K \mathcal L(f_\theta(s_{ij}, \color{olive}{z_i}), o_{ij}) \\
         + \color{red}{\mathrm{KL}}
-         \left(\color{green}{q_\color{blue}{\psi}
-            (z \mid \color{black}{(p_{ij}, o_{ij})_{j=1:K}})} \mid 
+         \left(\color{blue}{q_\color{blue}{\psi}
+            (z \mid \color{black}{(s_{ij}, o_{ij})_{j=1:K}})} \mid 
             \color{orange}{p_0(z)} \right)
         \Bigr]
         $$
@@ -29,20 +30,16 @@
         </thead>
         <tbody>
             <tr class="fragment" data-fragment-index=1>
-                <td>$\color{darkgreen}{q(\cdot\mid\cdot)}$</td>
+                <td>$\color{blue}{q_\psi(\cdot\mid\cdot)}$</td>
                 <td>Gaussian inference model</td>
-            </tr>
-            <tr class="fragment">
-                <td>$\color{blue}{\psi}$</td>
-                <td>Parameter vector of inference model</td>
             </tr>
             <tr class="fragment">
                 <td>$\color{darkorange}{\mathcal{p_0}}$</td>
                 <td>Gaussian prior on latent variable</td>
             </tr>
             <tr class="fragment">
-                <td>$\color{purple}{\mathcal{z_i}}$</td>
-                <td>Random sample from $\color{darkgreen}{q(\cdot\mid\cdot)}$</td>
+                <td>$\color{olive}{\mathcal{z_i}}$</td>
+                <td>Random sample from $\color{blue}{q(\cdot\mid\cdot)}$</td>
             </tr>
             <tr class="fragment">
                 <td>$\color{red}{\mathrm{KL}}$</td>

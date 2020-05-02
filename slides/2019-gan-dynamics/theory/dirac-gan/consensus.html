@@ -5,23 +5,25 @@
 ## Convergence Theory
 
 <div class="subtitle" style="height: 150px">
-    Zero-centered gradient penalties
-    <div style="font-size: 80%;">
+    Consensus optimization
+    <p><span style="font-size: 80%;">
             $
-            R(\psi)
+            R(\theta, \psi)
             :=
             \frac{\gamma}{2}
             \mathrm E_{p_{\mathcal D}(x)}
             \left[
-            \|\nabla_x D_\psi(x) \|^2
+            \|\nabla_\theta \mathcal{L}(\theta, \psi) \|^2
+            +
+            \|\nabla_\psi \mathcal{L}(\theta, \psi) \|^2
             \right]
             $
-    </div>
+        </span></p>
 </div>
 
 <div class="column-1 flex-col">
     <div style="width: 85%">
-        <video data-autoplay loop src="assets/2018_gan_stability/dirac_gan/gan_gradpen.webm" width="100%">
+        <video data-autoplay loop src="assets/2018_gan_stability/dirac_gan/gan_consensus.webm" width="100%">
     </div>
 </div>
 
@@ -30,8 +32,8 @@
     <span style="font-size: 70%;">
         $
         \left\{
-        -\frac{\gamma}{2} - \sqrt{\frac{\gamma^2}{4} - \varphi_1^\prime(0)^2},
-        -\frac{\gamma}{2} + \sqrt{\frac{\gamma^2}{4} - \varphi_1^\prime(0)^2}
+        -\gamma \varphi_1^\prime(0)^2 - i \varphi_1^\prime(0),
+        -\gamma \varphi_1^\prime(0)^2 + i \varphi_1^\prime(0),
         \right\}
         $
     </span>

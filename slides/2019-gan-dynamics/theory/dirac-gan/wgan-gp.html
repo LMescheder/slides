@@ -1,0 +1,28 @@
+<!-- .slide: class="layout-1x1" -->
+
+## Convergence Theory
+
+<div class="subtitle" style="height: 150px">
+    Wasserstein-GAN-GP [Gulrajani et al., 2017]
+        <p><span style="font-size: 80%;">
+            $
+            R(\psi)
+            :=
+            \frac{\gamma}{2}
+            \mathrm E_{\hat{x} \sim \hat{p}_\theta}
+            \left[
+            (\|\nabla_x D_\psi(x) \| - 1)^2
+            \right]
+            $
+        </span></p>
+</div>
+
+<div class="column-1 flex-col">
+    <div style="width: 85%">
+        <video data-autoplay loop src="assets/2018_gan_stability/dirac_gan/wgan_gp.webm" width="100%">
+    </div>
+</div>
+
+<div class="footer" style="height: 100px; margin: 20px">
+    Eigenvalues: vector field discontinuous
+</div>

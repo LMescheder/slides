@@ -1,0 +1,79 @@
+<!-- .slide: class="layout-2x1" -->
+
+## Generative Adversarial Networks
+
+<div class='subtitle'>
+    <h3>Optimization objective:</h3>
+</div>
+
+<div class="column-1 flex-col">
+    <div class="flex-col box"
+        style="align-self: center; width: 90%; height: 200px; margin: 50px; font-size: .85em">
+        $$
+        \mathcal{L}(
+            \color{blue}{\theta}, \color{red}{\psi}
+        )
+        =
+        \mathrm{E}_{
+            \color{blue}{x_1 \sim p_\theta}
+        } 
+        \left[
+            \color{brown}{\varphi_1} (
+                \color{red}{D_\psi}(\color{blue}{x_1})) \right] 
+        + \mathrm{E}_{
+            \color{olive}{x_2 \sim p_\mathcal{D}}} 
+        \left[
+        \color{brown}{\varphi_2}(
+            -\color{red}{D_\psi}(\color{olive}{x_2}))
+        \right]
+        $$
+    </div>
+</div>
+<div class="column-2" style="font-size: .8em; margin: 50px">
+    <table>
+        <thead class="fragment" data-fragment-index=1>
+            <tr>
+                <th>Symbol</th>
+                <th>Meaning</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="fragment" data-fragment-index=1>
+                <td>$\color{olive}{p_\mathcal{D}}$</td>
+                <td>True data distribution</td>
+            </tr>
+            <tr class="fragment">
+                <td>$\color{blue}{p_\theta}$</td>
+                <td>Generator distribution</td>
+            </tr>
+            <tr class="fragment">
+                <td>$\color{red}{D_\psi}$</td>
+                <td>Discriminator
+                </td>
+            </tr>
+            <tr class="fragment">
+                <td>$\color{brown}{\varphi_1}$, $\color{brown}{\varphi_2}$</td>
+                <td>Activation functions (e.g. softplus)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- <div class="column-2 fragment">
+    <div>Loss for unsupervised model:</div>
+    <div style="font-size: .8em;">
+        $$\mathcal L^{\text{gen}}_{\mathcal B}(\theta, \color{red}{\psi})
+        = \frac{1}{|\mathcal B|} \sum_{i=1}^{|\mathcal B|}
+        \Bigl[\sum_{j=1}^ K \mathcal L(f_\theta(p_{ij}, \color{red}{z_i}), o_{ij}) \\
+        + \color{red}{\mathrm{KL} \left(q_\psi(z | (p_{ij}, o_{ij})_{j=1:K}) \,\|\, p_0(z) \right) }
+        \Bigr]
+        $$
+    </div>
+    <div style="font-size: .9em;">
+        <ul>
+            <li style="margin: 0">$p_0$: prior for latent $z$</li>
+            <li style="margin: 0">$q_\psi$: (approximate) posterior</li>
+            <li style="margin: 0">$z_i$: random sample from $q_\psi$ </li>
+        </ul>
+    </div>
+</div> -->
