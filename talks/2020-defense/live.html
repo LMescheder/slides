@@ -96,7 +96,7 @@
 				</section>
 				<section data-markdown="slides/2019-gan-dynamics/results/celeba-hq.html"></section>
 				<section>
-					<section data-markdown="slides/2019-gan-dynamics/quantitative/imagenet-inception.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/quantitative/imagenet-inception-reduced.html"></section>
 					<section data-markdown="slides/2019-gan-dynamics/quantitative/imagenet-fid.html"></section>
 					<section data-markdown="slides/2019-gan-dynamics/quantitative/celeba256-fid.html"></section>
 				</section>
@@ -142,11 +142,11 @@
 					<section data-markdown="slides/2019-occupancy-networks/pointcloud/dmc.html"></section>
 				</section>
 				<section data-markdown="slides/2019-occupancy-networks/voxel/onet.html"></section>
-				<section data-markdown="slides/2019-occupancy-networks/generative/combined.html"></section>
 				<section>
 					<section data-markdown="slides/2019-occupancy-networks/quantitative/single_image.html"></section>
 					<section data-markdown="slides/2019-occupancy-networks/quantitative/pointcloud.html"></section>
 				</section>
+				<section data-markdown="slides/2019-occupancy-networks/generative/combined.html"></section>
 				<!-- Outlook and conclusion -->
 				<section data-markdown="slides/2020-defense/funcspace-operator/concept.html"></section>
 				<section data-markdown="slides/2020-defense/funcspace-operator/examples.html"></section>
@@ -176,12 +176,14 @@
 				minScale: 0.1,
 				maxScale: 10,
 				center: false,
-				history: true,
+				history: false,
 				display: "grid",
 				transition: "fade",
 				controlsTutorial: false,
 				hash: true,
 				pdfMaxPagesPerSlide: 1,
+				slideNumber: true,
+				hashOneBasedIndex: true,
 				multiplex: {
 					secret: null,
 					id: 'c2c50b746646e316',
