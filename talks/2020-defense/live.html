@@ -183,9 +183,9 @@
 				hash: true,
 				pdfMaxPagesPerSlide: 1,
 				multiplex: {
-				        secret: null,
-				        id: 'c2c50b746646e316',
-				        url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
+					secret: null,
+					id: 'c2c50b746646e316',
+					url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
 				},
 				dependencies: [
 					{ src: 'lib/reveal/plugin/markdown/marked.js' },
@@ -193,7 +193,9 @@
 					{ src: 'lib/reveal/plugin/notes/notes.js', async: true },
 					{ src: 'lib/reveal/plugin/highlight/highlight.js', async: true },
 					{ src: 'lib/reveal/plugin/math/math.js', async: true },
-					{ src: 'lib/reveal/plugin/zoom-js/zoom.js', async: true }
+					{ src: 'lib/reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
+					{ src: 'lib/reveal/plugin/multiplex/client.js', async: true }
 				]
 			});
 		</script>
