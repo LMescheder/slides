@@ -1,0 +1,62 @@
+<!-- .slide: class="layout-2x1" -->
+
+## Generative Adversarial Networks
+
+<div class="column-1 flex-col">
+    <div style="display: grid;
+               grid-template-columns: 350px 450px 350px 450px 100px;
+               grid-template-rows: 300px 100px 300px 100px;">
+        <div class="fragment flex-col" data-fragment-index=0
+            style="grid-row: 1; grid-column: 1;">
+            <img width="100%" src="assets/2018_gan_stability/motivation/gaussian.svg">
+        </div>
+        <div class="fragment flex-col" data-fragment-index=0
+            style="grid-row: 2; grid-column: 1;">
+            $z \sim \mathcal N(0, I_n)$
+        </div>
+        <div class="fragment flex-col" data-fragment-index=1
+            style="grid-row: 1; grid-column: 2;">
+            <img style="object-fit:contain" height="300px"
+                src="assets/misc/components/neural-network-left.svg">
+        </div>
+        <div class="fragment flex-col" data-fragment-index=1
+            style="grid-row: 2; grid-column: 2;">
+            <span>Generator $G_\theta$</span>
+        </div>
+        <div class="fragment flex-col" data-fragment-index=1
+            style="grid-row: 1; grid-column: 3">
+            <img style="object-fit:contain" width="90%"
+                src="assets/2018_gan_stability/motivation/bedroom_fake.jpg">
+        </div>
+        <div class="fragment flex-col" data-fragment-index=1
+            style="grid-row: 2; grid-column: 3">
+            $x \sim p_\theta$
+        </div>
+        <div class="fragment flex-col" data-fragment-index=2
+            style="grid-row: 3; grid-column: 3">
+            <img style="object-fit:contain" width="90%"
+                src="assets/2018_gan_stability/motivation/bedroom_real.jpg">
+        </div>
+        <div class="fragment flex-col" data-fragment-index=2
+            style="grid-row: 4; grid-column: 3">
+            $x \sim p_\mathcal{D}$
+        </div>
+        <div class="fragment flex-col" data-fragment-index=3
+            style="grid-row-start: 1; grid-row-end: 4; grid-column: 4;">
+            <img style="object-fit:contain" height="300px"
+                src="assets/misc/components/neural-network-right.svg">
+        </div>
+        <div class="fragment flex-col" data-fragment-index=3
+            style="grid-row: 4; grid-column: 4;">
+            <span>Diskriminator $D_\psi$</span>
+        </div>
+        <div class="fragment flex-col" data-fragment-index=3
+            style="grid-row-start: 1; grid-row-end: 4; grid-column: 5;">
+            Echt / Unecht?
+        </div>
+    </div>
+</div>
+
+<footer class="reference" style="margin: 20px">
+    [Goodfellow et al., NeurIPS 2014]
+</footer>

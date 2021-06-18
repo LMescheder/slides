@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<base href="../..">
+
+		<title>Stability and Expressiveness of Deep Generative Models</title>
+
+		<link rel="stylesheet" href="lib/reveal/css/reset.css">
+		<link rel="stylesheet" href="lib/reveal/css/reveal.css">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/reveal/lib/css/monokai.css">
+
+		<!-- Theme: choose either from lib/reveal/css/theme or take custom -->
+		<link rel="stylesheet" href="css/theme/mytheme.css">
+		<!-- <link rel="stylesheet" href="lib/reveal/css/theme/black.css"> -->
+
+		<!-- Layout based on flex boxes -->
+		<link rel="stylesheet" href="css/flex-layout.css">
+
+		<!-- Custom style sheet -->
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) 
+				? 'lib/reveal/css/print/pdf.css'
+				: 'lib/reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Intro -->
+				<section data-markdown="slides/2020-defense/title-de.html"></section>	
+				<!-- <section data-markdown="slides/2020-defense/link.html"></section> -->
+				<section data-markdown="slides/2020-defense/people-de.html"></section>
+				<section data-markdown="slides/2020-defense/intro/discriminative-de.html"></section>
+				<section data-markdown="slides/2020-defense/intro/discriminative-failure-de.html"></section>
+				<section>
+					<section data-markdown="slides/2020-defense/intro/generative-de.html"></section>
+					<section data-markdown="slides/2020-defense/why-generative/ill-posed-0.html"></section>
+					<section data-markdown="slides/2020-defense/why-generative/ill-posed-1.html"></section>
+					<section data-markdown="slides/2020-defense/why-generative/flexible-models-0.html"></section>
+					<section data-markdown="slides/2020-defense/why-generative/augmentation-0.html"></section>
+				</section>
+				<section data-markdown="slides/2020-defense/about/research-de.html"></section>
+				<!-- GAN Dynamics -->
+				<!-- <section data-markdown="slides/2019-gan-dynamics/intro/timeline.html"></section> -->
+				<!-- <section data-markdown="slides/2019-gan-dynamics/intro/current-state.html"></section> -->
+				<section>
+					<section data-markdown="slides/2019-gan-dynamics/intro/gan-model-de.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/int2020-defense/#/56ro/gan-loss.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/intro/altgd.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/intro/simgd.html"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/2019-gan-dynamics/intro/what-are-we-doing-de.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/intro/questions.html"></section>
+				</section>
+				<!-- <section data-markdown="slides/2019-gan-dynamics/theory/quote.html"></section> -->
+				<!-- <section data-markdown="slides/2019-gan-dynamics/theory/dirac-gan/model.html"></section> -->
+				<section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/dirac-gan/unregularized-de.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/eigenvalues/overview.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/eigenvalues/continuous.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/eigenvalues/discrete.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/dirac-gan/unregularized.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/dirac-gan/nsgan.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/dirac-gan/wgan.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/dirac-gan/wgan5.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/dirac-gan/wgan-gp.html"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/dirac-gan/r1-de.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/dirac-gan/r1-critical.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/dirac-gan/consensus.html"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/general/theorem-simplified-de.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/general/assumptions.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/general/theorem.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/general/regularizers.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/theory/general/proof.html"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/2019-gan-dynamics/results/imagenet-de.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/quantitative/imagenet-fid.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/results/celeba-hq.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/results/lsun-bedroom.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/results/lsun-church.html"></section>
+					<!-- <section data-markdown="slides/2019-gan-dynamics/results/lsun-bridge.html"></section> -->
+					<section data-markdown="slides/2019-gan-dynamics/results/lsun-tower.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/quantitative/celeba256-fid.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/experiments-2d/distributions.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/experiments-2d/table.html"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/2019-gan-dynamics/quantitative/imagenet-inception-reduced-de.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/quantitative/imagenet-fid.html"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/2019-gan-dynamics/outlook/method-used-0-de.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/outlook/method-used-1.html"></section>
+					<section data-markdown="slides/2019-gan-dynamics/outlook/method-used-2.html"></section>
+				</section>
+				<!-- <section data-markdown="slides/2019-gan-dynamics/outlook/open-questions.html"></section> -->
+				<!-- Occupancy Networks -->
+				<section data-markdown="slides/2020-defense/transitions/occupancy-networks-de.html"></section>
+				<section>
+					<section data-markdown="slides/2019-occupancy-networks/intro/generative-3d-de.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/intro/discriminative-3d.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/intro/generative-2d.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/intro/discriminative-2d.html"></section>
+				</section>
+				<section data-markdown="slides/2019-occupancy-networks/existing/voxel-de.html"></section>
+				<section data-markdown="slides/2019-occupancy-networks/existing/pointcloud-de.html"></section>
+				<section data-markdown="slides/2019-occupancy-networks/existing/mesh-de.html"></section>
+				<section data-markdown="slides/2019-occupancy-networks/existing/summary-de.html"></section>
+				<section data-markdown="slides/2019-occupancy-networks/approach/idea-de.html"></section>
+				<section>
+					<section data-markdown="slides/2019-occupancy-networks/approach/arguments-de.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/approach/architecture-vae.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/approach/loss-supervised.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/approach/loss-unsupervised.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/approach/inference.html"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/2019-occupancy-networks/quantitative/single_image-de.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/single_image/onet.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/single_image/r2n2.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/single_image/psgn.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/single_image/atlasnet.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/single_image/pixel2mesh.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/pointcloud/onet.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/pointcloud/r2n2.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/pointcloud/psgn.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/pointcloud/dmc.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/voxel/onet.html"></section>
+					<section data-markdown="slides/2019-occupancy-networks/quantitative/pointcloud.html"></section>
+				</section>
+				<section data-markdown="slides/2019-occupancy-networks/generative/combined-de.html"></section>
+				<!-- Outlook and conclusion -->
+				<section>
+					<section data-markdown="slides/2020-defense/funcspace-operator/examples-de.html"></section>
+					<section data-markdown="slides/2020-defense/funcspace-operator/concept.html"></section>
+				</section>
+				<section data-markdown="slides/2020-defense/conclusion/gan-conclusion-de.html"></section>
+				<section data-markdown="slides/2020-defense/conclusion/onet-conclusion-de.html"></section>
+				<section data-markdown="slides/2020-defense/conclusion/both-questions-de.html"></section>
+				<section data-markdown="slides/2020-defense/references-de.html"></section>
+				<section data-markdown="slides/misc/thanks-de.html"></section>
+				<!-- <section data-markdown="slides/misc/appendix.html"></section> -->
+			</div>
+		</div>
+
+		<script src="lib/reveal/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				width: 1920,
+				height: 1080,
+				margin: 0,
+				minScale: 0.1,
+				maxScale: 10,
+				center: false,
+				history: false,
+				display: "grid",
+				transition: "fade",
+				controlsTutorial: false,
+				hash: true,
+				pdfMaxPagesPerSlide: 1,
+				slideNumber: true,
+				hashOneBasedIndex: true,
+				multiplex: {
+					secret: '',
+					id: '',
+					url: ''
+				},
+				dependencies: [
+					{ src: 'lib/reveal/plugin/markdown/marked.js' },
+					{ src: 'lib/reveal/plugin/markdown/markdown.js' },
+					{ src: 'lib/reveal/plugin/notes/notes.js', async: true },
+					{ src: 'lib/reveal/plugin/highlight/highlight.js', async: true },
+					{ src: 'lib/reveal/plugin/math/math.js', async: true },
+					{ src: 'lib/reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
+					{ src: 'lib/reveal/plugin/multiplex/master.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
